@@ -1,0 +1,494 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+
+:root {
+  --primary-blue: #1e56a0;
+  --primary-blue-light: #3a7bd5;
+  --primary-text: #333;
+  --secondary-text: #666;
+  --light-bg: #f5f8ff;
+  --white: #fff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  color: var(--primary-text);
+  line-height: 1.5;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--primary-text);
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover {
+  color: var(--primary-blue);
+}
+
+.nav-links .active a {
+  color: var(--primary-blue);
+}
+
+.new-badge {
+  background-color: #f5a623;
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phone-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: transparent;
+  border: 1px solid var(--primary-blue);
+  color: var(--primary-blue);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* Hero Banner Styles */
+.hero-banner {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem 0;
+}
+
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.offer-tag {
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  position: absolute;
+  left: 1rem;
+}
+
+.ends-on {
+  font-size: 0.6rem;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.banner-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.highlight {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.enrol-button {
+  background-color: white;
+  color: var(--primary-blue);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.enrol-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Coaching Section Styles */
+.coaching-section {
+  padding: 3rem 0;
+}
+
+.coaching-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.coaching-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.coaching-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.blue-text {
+  color: var(--primary-blue);
+}
+
+.explore-text {
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+}
+
+.coaching-visuals {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.student-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.results-card {
+  background-color: var(--light-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.result-text {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.student-avatars {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar span {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: var(--primary-blue);
+}
+
+/* Course Buttons Styles */
+.course-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.course-button {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: var(--primary-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.course-button:hover,
+.course-button.active {
+  background-color: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+/* Scholarship Section Styles */
+.scholarship-section {
+  padding: 3rem 0;
+  background-color: var(--light-bg);
+}
+
+.scholarship-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.scholarship-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.scholarship-subtitle {
+  color: var(--secondary-text);
+}
+
+.scholarship-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.scholarship-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.register-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: var(--primary-blue);
+  border: none;
+  padding: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  text-decoration: underline;
+}
+
+.card-image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .coaching-title {
+    font-size: 2rem;
+  }
+
+  .coaching-visuals {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .results-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .banner-content {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .offer-tag {
+    position: relative;
+    left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .scholarship-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
