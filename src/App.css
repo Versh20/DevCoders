@@ -166,6 +166,7 @@ body {
 
 /* Hero Banner Styles */
 .hero-banner {
+  align-items: center;
   background-color: var(--primary-blue);
   color: white;
   padding: 1rem 0;
@@ -207,6 +208,7 @@ body {
 }
 
 .banner-text {
+  text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
 }
